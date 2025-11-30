@@ -7515,7 +7515,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
@@ -7543,11 +7543,10 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Ensure NLTK data required is available (run once)</span>
-<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'punkt'</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'punkt'</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'wordnet'</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'omw-1.4'</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'stopwords'</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -7561,7 +7560,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>True</pre>
 </div>
@@ -7584,13 +7583,10 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">lemmatizer</span> <span class="o">=</span> <span class="n">WordNetLemmatizer</span><span class="p">()</span>
-
-<span class="c1"># Helpful pretty-printer</span>
- 
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">lemmatizer</span> <span class="o">=</span> <span class="n">WordNetLemmatizer</span><span class="p">()</span> 
 <span class="n">pp</span> <span class="o">=</span> <span class="n">pprint</span><span class="o">.</span><span class="n">PrettyPrinter</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">140</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">print_doc_summary</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">tokens_preview</span><span class="o">=</span><span class="mi">30</span><span class="p">):</span>
@@ -7621,7 +7617,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Part 2: File reading utilities</span>
@@ -7645,7 +7641,6 @@ a.anchor-link {
 <span class="k">def</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf8'</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">keep_default_na</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-        <span class="c1"># concat rows and columns to a single text</span>
         <span class="n">rows</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
             <span class="n">rows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">" "</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">row</span><span class="o">.</span><span class="n">values</span> <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()]))</span>
@@ -7675,14 +7670,11 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Part 3: Preprocessing helpers and pipeline</span>
-
-<span class="c1"># Use NLTK English stopwords (you can extend with legal stopwords if desired)</span>
 <span class="n">STOPWORDS</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">'english'</span><span class="p">))</span>
-
 <span class="n">TOKEN_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"\w+"</span><span class="p">)</span>  <span class="c1"># word tokens (alphanumeric)</span>
 </pre></div>
 </div>
@@ -7694,15 +7686,13 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">tokenize_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
-    <span class="c1"># returns list of tokens lowercased</span>
     <span class="k">return</span> <span class="n">TOKEN_RE</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">lemmatize_list</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span>
-    <span class="c1"># POS-agnostic lemmatization using WordNet lemmatizer (fast and portable)</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">lemmatizer</span><span class="o">.</span><span class="n">lemmatize</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">]</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">preprocess_document</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">doc_id</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -7724,12 +7714,10 @@ a.anchor-link {
             <span class="n">sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
             <span class="n">sent_to_para</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p_idx</span><span class="p">)</span>
 
-    <span class="c1"># Full tokens across entire document (we'll use these positions)</span>
     <span class="n">tokens</span> <span class="o">=</span> <span class="n">tokenize_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>            <span class="c1"># original normalized tokens (lowercased)</span>
     <span class="n">lemmas</span> <span class="o">=</span> <span class="n">lemmatize_list</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>        <span class="c1"># lemmatized tokens aligned with tokens</span>
 
     <span class="c1"># Map token positions to sentence index and paragraph index.</span>
-    <span class="c1"># We'll compute by scanning sentences and matching tokens in order to maintain robust mapping.</span>
     <span class="n">pos_to_sent</span> <span class="o">=</span> <span class="p">{}</span>   <span class="c1"># token_position -&gt; sentence_index</span>
     <span class="n">pos_to_para</span> <span class="o">=</span> <span class="p">{}</span>   <span class="c1"># token_position -&gt; paragraph_index</span>
     <span class="n">token_index</span> <span class="o">=</span> <span class="mi">0</span>
@@ -7740,7 +7728,6 @@ a.anchor-link {
             <span class="n">pos_to_sent</span><span class="p">[</span><span class="n">token_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">s_idx</span>
             <span class="n">pos_to_para</span><span class="p">[</span><span class="n">token_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">sent_to_para</span><span class="p">[</span><span class="n">s_idx</span><span class="p">]</span>
             <span class="n">token_index</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="c1"># Note: token counts from tokenize_text(text) and sum of sentence tokens should match in normal text.</span>
     <span class="c1"># If mismatch, we still keep mappings for positions we could assign.</span>
 
     <span class="k">if</span> <span class="n">doc_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -7778,7 +7765,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Part 4: Build positional inverted index</span>
@@ -7803,7 +7790,6 @@ a.anchor-link {
     <span class="k">return</span> <span class="n">index</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">sorted_inverted_index_repr</span><span class="p">(</span><span class="n">index</span><span class="p">):</span>
-    <span class="c1"># produce OrderedDict sorted by term</span>
     <span class="k">return</span> <span class="n">OrderedDict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(((</span><span class="n">term</span><span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">postings</span><span class="o">.</span><span class="n">items</span><span class="p">())))</span> <span class="k">for</span> <span class="n">term</span><span class="p">,</span> <span class="n">postings</span> <span class="ow">in</span> <span class="n">index</span><span class="o">.</span><span class="n">items</span><span class="p">()),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 </pre></div>
 </div>
@@ -7826,13 +7812,12 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Part 5: Proximity and snippet utilities</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">snippet_from_sent_idx</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">sent_idx</span><span class="p">):</span>
-    <span class="c1"># safe guard</span>
     <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">sent_idx</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">doc</span><span class="p">[</span><span class="s1">'sentences'</span><span class="p">]):</span>
         <span class="k">return</span> <span class="n">doc</span><span class="p">[</span><span class="s1">'sentences'</span><span class="p">][</span><span class="n">sent_idx</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
     <span class="k">return</span> <span class="s2">""</span>
@@ -7848,15 +7833,12 @@ a.anchor-link {
 <span class="sd">    """</span>
     <span class="n">tokens</span> <span class="o">=</span> <span class="n">doc</span><span class="p">[</span><span class="s1">'tokens'</span><span class="p">]</span>
     <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">pos_pair</span>
-    <span class="c1"># ensure a &lt;= b</span>
     <span class="n">a0</span><span class="p">,</span> <span class="n">b0</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
     <span class="n">start</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">a0</span> <span class="o">-</span> <span class="n">window_tokens</span><span class="p">)</span>
     <span class="n">end</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">),</span> <span class="n">b0</span> <span class="o">+</span> <span class="n">window_tokens</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
     <span class="n">snippet_tokens</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
-    <span class="c1"># compute local indices for highlight</span>
     <span class="n">local_a</span> <span class="o">=</span> <span class="n">a0</span> <span class="o">-</span> <span class="n">start</span>
     <span class="n">local_b</span> <span class="o">=</span> <span class="n">local_a</span> <span class="o">+</span> <span class="p">(</span><span class="n">b0</span> <span class="o">-</span> <span class="n">a0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="c1"># escape HTML chars</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">esc</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'&amp;'</span><span class="p">,</span> <span class="s1">'&amp;amp;'</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'&lt;'</span><span class="p">,</span> <span class="s1">'&amp;lt;'</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'&gt;'</span><span class="p">,</span> <span class="s1">'&amp;gt;'</span><span class="p">)</span>
     <span class="n">pre</span> <span class="o">=</span> <span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">esc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">snippet_tokens</span><span class="p">[:</span><span class="n">local_a</span><span class="p">])</span>
@@ -7929,7 +7911,6 @@ a.anchor-link {
         <span class="c1"># intersection ignoring None</span>
         <span class="n">intersect</span> <span class="o">=</span> <span class="p">{</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sent_idxs_t1</span> <span class="k">if</span> <span class="n">s</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">}</span> <span class="o">&amp;</span> <span class="p">{</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sent_idxs_t2</span> <span class="k">if</span> <span class="n">s</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">}</span>
         <span class="k">for</span> <span class="n">sidx</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">intersect</span><span class="p">):</span>
-            <span class="c1"># optional: find representative positions within this sentence for highlighting</span>
             <span class="c1"># find a pos for term1 and term2 within sentence sidx</span>
             <span class="n">pos1</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">pos</span> <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="n">postings1</span><span class="p">[</span><span class="n">doc_id</span><span class="p">]</span> <span class="k">if</span> <span class="n">doc</span><span class="p">[</span><span class="s1">'pos_to_sent'</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span><span class="o">==</span><span class="n">sidx</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
             <span class="n">pos2</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">pos</span> <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="n">postings2</span><span class="p">[</span><span class="n">doc_id</span><span class="p">]</span> <span class="k">if</span> <span class="n">doc</span><span class="p">[</span><span class="s1">'pos_to_sent'</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span><span class="o">==</span><span class="n">sidx</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
@@ -7968,7 +7949,6 @@ a.anchor-link {
     <span class="k">return</span> <span class="n">results</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">extract_snippet_from_positions</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">pos_pair</span><span class="p">,</span> <span class="n">window_tokens</span><span class="o">=</span><span class="mi">8</span><span class="p">):</span>
-    <span class="c1"># returns a short snippet (tokens) around the positions (plain text)</span>
     <span class="n">tokens</span> <span class="o">=</span> <span class="n">doc</span><span class="p">[</span><span class="s1">'tokens'</span><span class="p">]</span>
     <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">pos_pair</span>
     <span class="n">start</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="n">window_tokens</span><span class="p">)</span>
@@ -7995,7 +7975,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Part 6: Phrase query using positional index</span>
@@ -8018,7 +7998,6 @@ a.anchor-link {
     <span class="n">L</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">phrase_lemmas</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">doc_id</span><span class="p">,</span> <span class="n">positions</span> <span class="ow">in</span> <span class="n">postings_first</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
         <span class="n">doc</span> <span class="o">=</span> <span class="n">docs_by_id</span><span class="p">[</span><span class="n">doc_id</span><span class="p">]</span>
-        <span class="c1"># We rely on doc['lemmas'] aligned to token positions.</span>
         <span class="n">lemmas</span> <span class="o">=</span> <span class="n">doc</span><span class="p">[</span><span class="s1">'lemmas'</span><span class="p">]</span>
         <span class="n">tokens</span> <span class="o">=</span> <span class="n">doc</span><span class="p">[</span><span class="s1">'tokens'</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">positions</span><span class="p">:</span>
@@ -8040,7 +8019,6 @@ a.anchor-link {
                 <span class="n">snippet_tokens</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
                 <span class="n">a</span> <span class="o">=</span> <span class="n">p</span> <span class="o">-</span> <span class="n">start</span>
                 <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">L</span>
-                <span class="c1"># escape HTML special chars</span>
                 <span class="k">def</span><span class="w"> </span><span class="nf">esc</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
                     <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'&amp;'</span><span class="p">,</span> <span class="s1">'&amp;amp;'</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'&lt;'</span><span class="p">,</span> <span class="s1">'&amp;lt;'</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'&gt;'</span><span class="p">,</span> <span class="s1">'&amp;gt;'</span><span class="p">)</span>
                 <span class="n">pre</span> <span class="o">=</span> <span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">esc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">snippet_tokens</span><span class="p">[:</span><span class="n">a</span><span class="p">])</span>
@@ -8048,7 +8026,7 @@ a.anchor-link {
                 <span class="n">post</span> <span class="o">=</span> <span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">esc</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">snippet_tokens</span><span class="p">[</span><span class="n">b</span><span class="p">:])</span>
                 <span class="n">highlighted</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">pre</span><span class="si">}</span><span class="s2"> &lt;span style=</span><span class="se">\"</span><span class="s2">background-color:#fff59d;color:#000; padding:2px 4px; border-radius:3px</span><span class="se">\"</span><span class="s2">&gt;</span><span class="si">{</span><span class="n">phrase_text</span><span class="si">}</span><span class="s2">&lt;/span&gt; </span><span class="si">{</span><span class="n">post</span><span class="si">}</span><span class="s2">"</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
                 <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">doc_id</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">s_idx</span><span class="p">,</span> <span class="n">para_idx</span><span class="p">,</span> <span class="n">highlighted</span><span class="p">))</span>
-                <span class="k">break</span>  <span class="c1"># one match per doc is sufficient</span>
+                <span class="k">break</span>
     <span class="k">return</span> <span class="n">results</span>
 </pre></div>
 </div>
@@ -8060,12 +8038,10 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"./data"</span><span class="p">)</span>  <span class="c1"># ensure your 10 files are here</span>
-
-<span class="c1"># 1. Collect files</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"./data"</span><span class="p">)</span>
 <span class="n">files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">DATA_DIR</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">is_file</span><span class="p">()])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">Files found: </span><span class="si">{}</span><span class="se">\n</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
@@ -8075,7 +8051,7 @@ a.anchor-link {
         <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">2d</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">  (</span><span class="si">{</span><span class="n">f</span><span class="o">.</span><span class="n">suffix</span><span class="si">}</span><span class="s2">)  size=</span><span class="si">{</span><span class="n">size</span><span class="si">}</span><span class="s2"> bytes"</span><span class="p">)</span>
 
-<span class="n">files_list</span> <span class="o">=</span> <span class="n">files</span>  <span class="c1"># keep reference for later cells</span>
+<span class="n">files_list</span> <span class="o">=</span> <span class="n">files</span>
 </pre></div>
 </div>
 </div>
@@ -8110,7 +8086,7 @@ Files found: 9
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 2. Preprocess all files</span>
@@ -8172,7 +8148,7 @@ bench opinion october term 2005 syllabus note where it is feasible a syllabus he
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">Preprocessing complete. Example document keys and sizes:'</span><span class="p">)</span>
@@ -8245,7 +8221,7 @@ Lemmas preview:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 3. Build positional inverted index</span>
@@ -8269,7 +8245,7 @@ Lemmas preview:
 <span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span> <span class="o">+</span> <span class="s1">'-'</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"... (vocab size = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">sorted_index</span><span class="p">)</span><span class="si">}</span><span class="s2">)</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 
-<span class="c1"># 5. Example Proximity queries</span>
+<span class="c1"># 5. Proximity queries</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">=== Example Proximity Queries ==='</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -9166,11 +9142,10 @@ Sample postings:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Example: counsel /10 ineffective</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
 <span class="n">q1</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"counsel"</span><span class="p">,</span> <span class="s2">"/10"</span><span class="p">,</span> <span class="s2">"ineffective"</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s2">"/\d+"</span><span class="p">,</span> <span class="n">q1</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">q1</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">:])</span>
@@ -9182,7 +9157,6 @@ Sample postings:
         <span class="nb">print</span><span class="p">(</span><span class="s1">'No matches found for this proximity query.'</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">doc_id</span><span class="p">,</span> <span class="n">pairs</span> <span class="ow">in</span> <span class="n">res</span><span class="p">:</span>
         <span class="n">doc</span> <span class="o">=</span> <span class="n">docs_by_id</span><span class="p">[</span><span class="n">doc_id</span><span class="p">]</span>
-        <span class="c1"># show up to 3 pairs per doc</span>
         <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">pairs</span><span class="p">[:</span><span class="mi">3</span><span class="p">]:</span>
             <span class="n">highlighted</span><span class="p">,</span> <span class="n">sidx</span><span class="p">,</span> <span class="n">pidx</span><span class="p">,</span> <span class="n">token_pos</span> <span class="o">=</span> <span class="n">build_highlighted_snippet</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">pair</span><span class="p">)</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Doc: </span><span class="si">{</span><span class="n">doc_id</span><span class="si">}</span><span class="s2"> | sentence_index=</span><span class="si">{</span><span class="n">sidx</span><span class="si">}</span><span class="s2"> | paragraph_index=</span><span class="si">{</span><span class="n">pidx</span><span class="si">}</span><span class="s2"> | token_start_pos=</span><span class="si">{</span><span class="n">token_pos</span><span class="si">}</span><span class="s2"> | pair=</span><span class="si">{</span><span class="n">pair</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -9230,11 +9204,10 @@ Doc: indian_supreme_court_judgments.csv | sentence_index=67482 | paragraph_index
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Example: due /s process</span>
-<span class="n">res_s</span> <span class="o">=</span> <span class="n">proximity_same_sentence</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">docs_by_id</span><span class="p">,</span> <span class="s2">"due"</span><span class="p">,</span> <span class="s2">"process"</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">res_s</span> <span class="o">=</span> <span class="n">proximity_same_sentence</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">docs_by_id</span><span class="p">,</span> <span class="s2">"due"</span><span class="p">,</span> <span class="s2">"process"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span> <span class="o">+</span> <span class="s1">'='</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Query: due /s process -&gt; Matches: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">res_s</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'-'</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
@@ -9244,11 +9217,9 @@ Doc: indian_supreme_court_judgments.csv | sentence_index=67482 | paragraph_index
     <span class="n">doc</span> <span class="o">=</span> <span class="n">docs_by_id</span><span class="p">[</span><span class="n">doc_id</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">pair</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">highlighted</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">token_pos</span> <span class="o">=</span> <span class="n">build_highlighted_snippet</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">pair</span><span class="p">)</span>
-        <span class="c1"># s2 should equal sidx; p2 is paragraph index</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Doc: </span><span class="si">{</span><span class="n">doc_id</span><span class="si">}</span><span class="s2"> | sentence_index=</span><span class="si">{</span><span class="n">sidx</span><span class="si">}</span><span class="s2"> | paragraph_index=</span><span class="si">{</span><span class="n">p2</span><span class="si">}</span><span class="s2"> | token_start_pos=</span><span class="si">{</span><span class="n">token_pos</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
         <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="sa">f</span><span class="s2">"&lt;div style='font-family: monospace; background:#1f1f1f; color:#e6e6e6; padding:10px; border-radius:6px; margin:6px 0;'&gt;</span><span class="si">{</span><span class="n">highlighted</span><span class="si">}</span><span class="s2">&lt;/div&gt;"</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="c1"># fallback: show sentence text and indices</span>
         <span class="n">sent_text</span> <span class="o">=</span> <span class="n">snippet_from_sent_idx</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">sidx</span><span class="p">)</span>
         <span class="n">pidx</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'pos_to_para'</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">index</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'due'</span><span class="p">,{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">doc_id</span><span class="p">,[])),</span> <span class="kc">None</span><span class="p">))</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Doc: </span><span class="si">{</span><span class="n">doc_id</span><span class="si">}</span><span class="s2"> | sentence_index=</span><span class="si">{</span><span class="n">sidx</span><span class="si">}</span><span class="s2"> | paragraph_index=</span><span class="si">{</span><span class="n">pidx</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -10108,7 +10079,7 @@ Doc: indian_supreme_court_judgments.csv | sentence_index=164004 | paragraph_inde
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Example: child /p visitation (short output)</span>
@@ -10154,11 +10125,10 @@ indian_supreme_court_judgments.csv | para=0 | snippet: of the protection of chil
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 6. Example phrase queries</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">=== Example Phrase Queries ==='</span><span class="p">)</span>
 <span class="n">phrases</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"right to counsel"</span><span class="p">,</span> <span class="s2">"due process"</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">ph</span> <span class="ow">in</span> <span class="n">phrases</span><span class="p">:</span>
@@ -10170,7 +10140,6 @@ indian_supreme_court_judgments.csv | para=0 | snippet: of the protection of chil
         <span class="nb">print</span><span class="p">(</span><span class="s1">'No matches found for this phrase.'</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">doc_id</span><span class="p">,</span> <span class="n">start_pos</span><span class="p">,</span> <span class="n">sent_idx</span><span class="p">,</span> <span class="n">para_idx</span><span class="p">,</span> <span class="n">highlighted</span> <span class="ow">in</span> <span class="n">res_ph</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Doc: </span><span class="si">{</span><span class="n">doc_id</span><span class="si">}</span><span class="s2"> | sentence_index=</span><span class="si">{</span><span class="n">sent_idx</span><span class="si">}</span><span class="s2"> | paragraph_index=</span><span class="si">{</span><span class="n">para_idx</span><span class="si">}</span><span class="s2"> | token_start_pos=</span><span class="si">{</span><span class="n">start_pos</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-        <span class="c1"># display highlighted snippet as HTML for better readability in notebook</span>
         <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="sa">f</span><span class="s2">"&lt;div style='font-family: monospace; background:#1f1f1f; color:#e6e6e6; padding:10px; border-radius:6px; margin:6px 0;'&gt;</span><span class="si">{</span><span class="n">highlighted</span><span class="si">}</span><span class="s2">&lt;/div&gt;"</span><span class="p">))</span>
         <span class="nb">print</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'='</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
